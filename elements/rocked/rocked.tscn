@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://dwg23q1ik5xjq"]
+
+[ext_resource type="Texture2D" uid="uid://2c0gbob0ac5j" path="res://assets/Gaster iaderka.png" id="1_86iqe"]
+[ext_resource type="Script" uid="uid://cckvehm64ekew" path="res://elements/rocked/rocked.gd" id="1_uvm3j"]
+[ext_resource type="Texture2D" uid="uid://cgaibhwc4skow" path="res://assets/Gaster iaderka2.png" id="2_uvm3j"]
+[ext_resource type="Texture2D" uid="uid://cssk36375q6wa" path="res://assets/Gaster iaderka3.png" id="3_01por"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wmwny"]
+atlas = ExtResource("1_86iqe")
+region = Rect2(0, 0, 554, 554)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uta54"]
+atlas = ExtResource("2_uvm3j")
+region = Rect2(0, 0, 554, 554)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_clxq3"]
+atlas = ExtResource("3_01por")
+region = Rect2(0, 0, 554, 554)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bhunq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wmwny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uta54")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_clxq3")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bhunq"]
+
+[node name="Rocked" type="CharacterBody2D" unique_id=1382522586]
+top_level = true
+position = Vector2(4, -5)
+scale = Vector2(0.08070869, 0.05508839)
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_uvm3j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1421638394]
+rotation = 3.1415927
+sprite_frames = SubResource("SpriteFrames_bhunq")
+frame_progress = 0.24210083
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=665352758]
+scale = Vector2(-8.546591, 10.844816)
+shape = SubResource("CapsuleShape2D_bhunq")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=768160698]
+rect = Rect2(-99.12192, -163.37381, 198.24384, 344.90027)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

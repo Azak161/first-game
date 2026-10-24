@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cpul5wwjehosf"]
+
+[ext_resource type="Script" uid="uid://xk0snnhdt6l4" path="res://elements/Space_ship/space_ship.gd" id="1_bkbqp"]
+[ext_resource type="Texture2D" uid="uid://brk1gu05lvsl1" path="res://assets/suise.png" id="2_200bu"]
+[ext_resource type="PackedScene" uid="uid://dwg23q1ik5xjq" path="res://elements/rocked/rocked.tscn" id="3_200bu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bhunq"]
+radius = 42.223907
+height = 160.31464
+
+[node name="spaceShip" type="CharacterBody2D" unique_id=1166638976]
+position = Vector2(2.9999998, 11)
+scale = Vector2(0.23968036, 0.16058105)
+collision_layer = 2
+script = ExtResource("1_bkbqp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=409032607]
+rotation = 6.2779503
+scale = Vector2(1.6797808, 2.6271935)
+texture = ExtResource("2_200bu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1870040100]
+position = Vector2(9.947355e-07, -2.7105054e-20)
+rotation = 3.1415925
+scale = Vector2(5.813568, 4.9138703)
+shape = SubResource("CapsuleShape2D_bhunq")
+
+[node name="Rocked" parent="." unique_id=1382522586 instance=ExtResource("3_200bu")]
+position = Vector2(2, -134.00002)
+scale = Vector2(0.31019625, 0.2836531)

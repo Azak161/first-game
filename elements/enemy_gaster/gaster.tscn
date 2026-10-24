@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://dj8r64yqwl3y"]
+
+[ext_resource type="Script" uid="uid://b1slqraii55ho" path="res://elements/enemy_gaster/gaster.gd" id="1_dyg22"]
+[ext_resource type="Texture2D" uid="uid://d1aphlhymgkiu" path="res://assets/2332323.png" id="1_s2ptg"]
+[ext_resource type="Texture2D" uid="uid://on5v7igdybyk" path="res://assets/Gaster11.png" id="2_dyg22"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxe8l"]
+atlas = ExtResource("1_s2ptg")
+region = Rect2(0, 0, 348, 348)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7de7"]
+atlas = ExtResource("2_dyg22")
+region = Rect2(0, 0, 348, 348)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_riqys"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vxe8l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o7de7")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bhunq"]
+
+[node name="Gaster" type="CharacterBody2D" unique_id=535049568]
+scale = Vector2(0.061278418, 0.06263088)
+collision_layer = 4
+script = ExtResource("1_dyg22")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1689080797]
+light_mask = 4
+sprite_frames = SubResource("SpriteFrames_riqys")
+autoplay = "default"
+frame_progress = 0.078520365
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1622344365]
+position = Vector2(0, 3.0000005)
+scale = Vector2(10.177242, 15.93111)
+shape = SubResource("CircleShape2D_bhunq")
+
+[node name="RayCastLeft" type="RayCast2D" parent="." unique_id=489525108]
+position = Vector2(-90, 0)
+target_position = Vector2(-30, 0)
+
+[node name="RayCastRight" type="RayCast2D" parent="." unique_id=1281917160]
+position = Vector2(90, 0)
+target_position = Vector2(30, 0)

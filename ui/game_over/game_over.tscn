@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://d4geqbttt2tyu"]
+
+[ext_resource type="Script" uid="uid://mtn8ssi05rel" path="res://ui/game_over/game_over.gd" id="1_ns3eh"]
+
+[node name="GameOver" type="CanvasLayer" unique_id=558266731]
+script = ExtResource("1_ns3eh")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1963627989]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.9411765)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=120162163]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_right = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1076610343]
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2047410582]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "GAME OVER
+ДОХОДЯГА
+"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1898052907]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.12718457, 0.4038403, 0.25821635, 1)
+theme_override_colors/font_hover_color = Color(0.44313726, 0.015686275, 0.53333336, 1)
+theme_override_colors/icon_pressed_color = Color(0.44313726, 0.015686275, 0.53333336, 1)
+text = "Restart"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

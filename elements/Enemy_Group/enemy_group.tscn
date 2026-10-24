@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://drr0qsu78eult"]
+
+[ext_resource type="Script" uid="uid://cvej7m68jdkvp" path="res://elements/Enemy_Group/enemy_group.gd" id="1_l6k3y"]
+[ext_resource type="PackedScene" uid="uid://dj8r64yqwl3y" path="res://elements/enemy_gaster/gaster.tscn" id="1_ri78n"]
+
+[node name="EnemyGroup" type="Node2D" unique_id=685700750]
+light_mask = 4
+script = ExtResource("1_l6k3y")
+
+[node name="Gaster" parent="." unique_id=535049568 groups=["enemy_group"] instance=ExtResource("1_ri78n")]
+position = Vector2(30, 30)
+scale = Vector2(0.09263355, 0.092529364)
+
+[node name="Gaster2" parent="." unique_id=1488896574 instance=ExtResource("1_ri78n")]
+position = Vector2(60, 30)
+scale = Vector2(0.09263355, 0.092529364)
+
+[node name="Gaster3" parent="." unique_id=764622536 instance=ExtResource("1_ri78n")]
+position = Vector2(90, 30)
+scale = Vector2(0.09263355, 0.092529364)
+
+[node name="Gaster4" parent="." unique_id=501846628 instance=ExtResource("1_ri78n")]
+position = Vector2(120, 30)
+scale = Vector2(0.09263355, 0.092529364)
+
+[node name="Gaster5" parent="." unique_id=1301217258 instance=ExtResource("1_ri78n")]
+position = Vector2(150, 30)
+scale = Vector2(0.09263355, 0.092529364)
+
+[node name="Gaster6" parent="." unique_id=1364432878 instance=ExtResource("1_ri78n")]
+position = Vector2(180, 30)
+scale = Vector2(0.09263355, 0.092529364)
+
+[node name="Gaster7" parent="." unique_id=1657583332 instance=ExtResource("1_ri78n")]
+position = Vector2(45, 60)
+scale = Vector2(0.09263355, 0.092529364)
+
+[node name="Gaster8" parent="." unique_id=283764879 instance=ExtResource("1_ri78n")]
+position = Vector2(76, 60)
+scale = Vector2(0.09263355, 0.092529364)
+
+[node name="Gaster9" parent="." unique_id=541180507 instance=ExtResource("1_ri78n")]
+position = Vector2(105.99999, 60)
+scale = Vector2(0.09263355, 0.092529364)
+
+[node name="Gaster10" parent="." unique_id=1457894309 instance=ExtResource("1_ri78n")]
+position = Vector2(136, 59)
+scale = Vector2(0.09263355, 0.092529364)
+
+[node name="Gaster11" parent="." unique_id=231901809 instance=ExtResource("1_ri78n")]
+position = Vector2(165, 58.999996)
+scale = Vector2(0.09263355, 0.092529364)
+
+[node name="Gaster12" parent="." unique_id=1333776 instance=ExtResource("1_ri78n")]
+position = Vector2(195, 58)
+scale = Vector2(0.09263355, 0.092529364)
+
+[node name="BlockTimer" type="Timer" parent="." unique_id=215619001]
+wait_time = 0.5
+one_shot = true

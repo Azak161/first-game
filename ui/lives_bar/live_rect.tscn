@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://blmxk1ego3b2t"]
+
+[ext_resource type="Texture2D" uid="uid://chxrtp22qdyl4" path="res://assets/heart.png" id="1_7mc0i"]
+
+[node name="LiveRect" type="TextureRect" unique_id=697826128]
+custom_minimum_size = Vector2(20, 20)
+texture = ExtResource("1_7mc0i")
+expand_mode = 1
+stretch_mode = 5

@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://ceascyo4mhrb2"]
+
+[ext_resource type="Script" uid="uid://cgkd4nkduulmn" path="res://ui/hud/hud.gd" id="1_4d6w6"]
+[ext_resource type="PackedScene" uid="uid://2ynaa13w7qe2" path="res://ui/lives_bar/lives_bar.tscn" id="2_4d6w6"]
+
+[node name="HUD" type="CanvasLayer" unique_id=163053290]
+script = ExtResource("1_4d6w6")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=124204892]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1966229962]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=831339636]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=2142794004]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.14877003, 0.24955973, 1, 1)
+text = "0"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=2081577899]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LivesBar" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=338940412 instance=ExtResource("2_4d6w6")]
+layout_mode = 2

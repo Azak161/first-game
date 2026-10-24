@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://c4u15qtflgkuh"]
+
+[ext_resource type="Script" uid="uid://dmmd42qud3qjr" path="res://game_vs_gaster.gd" id="1_s4cif"]
+[ext_resource type="Texture2D" uid="uid://cwodaupdgxht6" path="res://assets/Shelter.webp" id="1_vbtpb"]
+[ext_resource type="PackedScene" uid="uid://cpul5wwjehosf" path="res://elements/Space_ship/space_ship.tscn" id="2_kqrau"]
+[ext_resource type="PackedScene" uid="uid://lwn5lig0i8m0" path="res://elements/Wall/wall.tscn" id="3_s4cif"]
+[ext_resource type="PackedScene" uid="uid://drr0qsu78eult" path="res://elements/Enemy_Group/enemy_group.tscn" id="4_vbtpb"]
+[ext_resource type="PackedScene" uid="uid://ceascyo4mhrb2" path="res://ui/hud/hud.tscn" id="5_kqrau"]
+
+[node name="Game vs Gaster" type="Node2D" unique_id=35198634]
+script = ExtResource("1_s4cif")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1405843624]
+texture_filter = 3
+texture_repeat = 2
+position = Vector2(128, 120)
+texture = ExtResource("1_vbtpb")
+region_enabled = true
+region_rect = Rect2(0, 0, 256, 240)
+
+[node name="Wall" parent="." unique_id=575260055 instance=ExtResource("3_s4cif")]
+
+[node name="Wall2" parent="." unique_id=1299862778 instance=ExtResource("3_s4cif")]
+position = Vector2(256, 0)
+
+[node name="spaceShip" parent="." unique_id=1166638976 instance=ExtResource("2_kqrau")]
+position = Vector2(122, 198)
+scale = Vector2(0.06820206, 0.054198153)
+
+[node name="EnemyGroup" parent="." unique_id=685700750 instance=ExtResource("4_vbtpb")]
+position = Vector2(13, 16)
+
+[node name="HUD" parent="." unique_id=163053290 instance=ExtResource("5_kqrau")]
